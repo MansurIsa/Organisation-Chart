@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #F5F7FA;
+    border: none;
+    display: flex;
+    justify-content: center;
+    min-width: 200% !important;
+    overflow-x: auto !important;
+}
+
+.tree{
+    margin-top: 60px;
+    
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 1px solid #ccc;
+    border-radius: 0 2px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 2px 0 0 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.tree li a {
+    padding: 5px 12px;
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 2px;
+    transition: all 0.5s;
+}
+
+.tools{
+    display: inline-block;
+}
+.tools i, .tree .fa-plus{
+    font-size: 10px;
+    background-color: #DADCE0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    padding: 4px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.tools .fa-times{
+    background-color: #f5426c;
+}
+.tree .categories{
+    background-color: #fff;
+    color: #000;
+    border: 1px dashed #ccc;
+}
+.tree .category{
+    background-color: #ff5e00;
+    color: #fff;
+}
+.tree .sub_category{
+    background-color: #42cbf5;
+    color: #fff;
+}
+.tree .item{
+    background-color: #b5b7bb;
+    color: #fff;
+}
